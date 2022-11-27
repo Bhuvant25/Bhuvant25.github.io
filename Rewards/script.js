@@ -1,7 +1,6 @@
 
 let btn = document.getElementById("btn");
 async function linkCreator(json_data){
-    console.log("Hello")
     let data_array = json_data["data"];
     
     let input = document.getElementById("count");
@@ -22,7 +21,6 @@ async function linkCreator(json_data){
     }
 }
 btn.addEventListener("click", function() {
-    console.log("Hello");
     let url = "data.json";
     fetch(url)
         .then(response => response.json())
