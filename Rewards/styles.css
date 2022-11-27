@@ -1,0 +1,27 @@
+body{
+    color:white;
+    margin:20px;
+    background-size: 100% 100%;
+    background-color: rgb(0, 0, 0);
+    font-family: sans-serif;
+}
+.top{
+    display:inline-flex;
+}
+h4{
+    color:rgb(248, 223, 100);
+    margin:5px;
+    padding:5px;
+}
+div{
+    margin:5px;
+    padding:5px;
+}
+button{
+    margin-left:20px;
+    padding:5px;
+    background-color:rgb(135, 192, 239);
+    color:black;
+    border-radius: 5px;
+    border: 1px solid black;
+}
