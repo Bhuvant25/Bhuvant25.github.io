@@ -7,6 +7,10 @@ async function linkCreator(json_data){
     if(input.value == "" || input.value <= 0) {
         input.value = 15;
     }
+    let timer = document.getElementById("time");
+    if(timer.value="" || timer.value <= 0) {
+        timer.value = 10;
+    }
     // bing search url
     let url_modified,url = "https://www.bing.com/search?q=";
     for(let i=0;i<input.value;i++){
@@ -17,7 +21,7 @@ async function linkCreator(json_data){
 
         window.open(url_modified, '_blank');
         // wait for 1 second 
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, timer.value*1000));
     }
 }
 btn.addEventListener("click", function() {
