@@ -8,7 +8,7 @@ async function linkCreator(json_data){
         input.value = 15;
     }
     let timer = document.getElementById("time");
-    if(timer.value="" || timer.value <= 0) {
+    if(timer.value == "" || timer.value <= 0) {
         timer.value = 8;
     }
     timer.value += Math.floor(Math.random()*10) ; 
