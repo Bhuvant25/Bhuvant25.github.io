@@ -9,9 +9,9 @@ async function linkCreator(json_data){
     }
     let timer = document.getElementById("time");
     if(timer.value="" || timer.value <= 0) {
-        timer.value = 10;
+        timer.value = 8;
     }
-    timer.value += Math.random()*10 ; 
+    timer.value += Math.floor(Math.random()*10) ; 
     // bing search url
     let url_modified,url = "https://www.bing.com/search?q=";
     for(let i=0;i<input.value;i++){
