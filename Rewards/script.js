@@ -7,11 +7,8 @@ async function linkCreator(json_data){
     if(input.value == "" || input.value <= 0) {
         input.value = 15;
     }
-    let timer = document.getElementById("time");
-    if(timer.value == "" || timer.value <= 0) {
-        timer.value = 8;
-    }
-    timer.value += Math.floor(Math.random()*10) ; 
+    let timer = 8;
+    let a,time_updated;
     // bing search url
     let url_modified,url = "https://www.bing.com/search?q=";
     for(let i=0;i<input.value;i++){
@@ -19,10 +16,12 @@ async function linkCreator(json_data){
         // add the random word to the url
         url_modified = url + data_array[random_index];
         // load the url in index1.html 
-
+        
         window.open(url_modified, '_blank');
-        // wait for 1 second 
-        await new Promise(resolve => setTimeout(resolve, timer.value*1000));
+        // wait for some second 
+        a = (Math.random(0.095,1)*10 + Math.random(0.005,1)*10);
+        time_updated = (timer + a);
+        await new Promise(resolve => setTimeout(resolve, Math.round(time_updated*1000)));
     }
 }
 btn.addEventListener("click", function() {
